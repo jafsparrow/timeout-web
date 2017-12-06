@@ -1,13 +1,15 @@
 
 
 .club-image-container{
-    max-height: 80px;
+    max-height: 30%;
+    height: auto;
     background-color: rgb(223, 211, 211);
     text-align: center;
 }
 
 
 .logo-image {
-    max-height: 80px;
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
 }
