@@ -1,0 +1,11 @@
+
+
+.club-list {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.club-list:hover {
+       background: gold;
+       text-decoration: black;
+}
