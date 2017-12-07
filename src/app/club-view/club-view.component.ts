@@ -12,6 +12,7 @@ import { Observable } from 'rxjs/Observable';
 export class ClubViewComponent implements OnInit, OnChanges {
   @Input() club: any = {};
   management: Observable<any[]>;
+  imageSource = 'https://upload.wikimedia.org/wikipedia/en/thumb/7/76/P%C3%ABrmeti_Club_Logo.svg/626px-P%C3%ABrmeti_Club_Logo.svg.png';
   constructor(private firebseService: FirebaseService) { }
 
   ngOnInit() {

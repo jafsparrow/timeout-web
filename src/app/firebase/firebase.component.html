@@ -1,17 +1,26 @@
-<mat-tab-group dynamicHeight="true" backgroundColor="primary" >
+<mat-tab-group dynamicHeight="true" headerPosition="">
     <mat-tab label="Clubs">
       <div fxLayout="column" fxLayoutAlign="center"> 
-              <div  *ngFor="let item of items | async" (click)= "viewClub(item)" class="club-list">
-                <!-- <h4>
-                  <a>{{item.name}}</a>
-                </h4> -->
-                <app-club-view [club]="item"></app-club-view>
+          <div >
+            <div fxLayout="row" class="tab-header-container" style="max-width: 500px;margin: 5px auto;">
+              <div class="tab-header" fxFlex>
+               <h2>
+                 Clubs
+                 </h2> 
               </div>
+              <div class="tab-heade-button">
+                <button  mat-raised-button
+                color="accent" routerLink="add">Add a Club</button>
+              </div>
+            </div>
+            <div  *ngFor="let item of items | async" class="club-list">
+              <app-club-view [club]="item"></app-club-view>
+            </div>
+          </div>
      </div>
-
     </mat-tab>
-    
     <mat-tab label="News">
+        
       <h1>News will be displayed here.</h1>
       <p>...</p>
     </mat-tab>

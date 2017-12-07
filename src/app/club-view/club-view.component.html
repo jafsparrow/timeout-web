@@ -1,33 +1,24 @@
-<mat-card class="club-summary-card">
 
-  <div class="club-view-container" fxLayout="row" fxLayoutGap="10px">
+  <mat-card class="club-view-card">
+  
+      <mat-card-header>
+          <div mat-card-avatar class="header-image" 
+          [ngStyle]="{'background-image': 'url(' + imageSource + ')'}">        </div>
+          <mat-card-title>{{club.name}}</mat-card-title>
+          <mat-card-subtitle>{{club.address1}}</mat-card-subtitle>
+      </mat-card-header>
+      <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+      <mat-card-content>
+          {{club.description}}
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-raised-button>VIEW</button>
+      </mat-card-actions>
+  
+  </mat-card>
 
-
-    <div  fxFlex="10"
-      class="club-image-container">
-      <img class="logo-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/P%C3%ABrmeti_Club_Logo.svg/626px-P%C3%ABrmeti_Club_Logo.svg.png" alt="">
-    </div>
-    <div fxFlex>
-    <div fxLayout="row">
-      <div fxFlex>
-        <h3> {{club.name}} </h3>
-      </div>
-      
-      <div>
-        {{club.address1}}
-      </div>
-
-
-    </div>
-    <hr>
-    <p> {{club.description}}</p>
-    </div>
-  </div>
 
   <!-- <div
       *ngFor="let item of management| async" >
       <p>{{ item.name}}</p>
     </div> -->
-
-
-</mat-card>

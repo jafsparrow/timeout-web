@@ -19,17 +19,17 @@ export class AddclubComponent implements OnInit {
   addClub(formData) {
     console.log(formData);
 
-    // this.firebseService.addClub(formData).then( (res) => {
+    this.firebseService.addClub(formData.value).then( (res) => {
 
-    //   console.log('successfully added');
-    //   console.log(res.id);
-    //   return res.id;
-    // })
-    // .then (response => {
-    //   return this.firebseService.addClubManagement(response);
-    // })
-    // .then(responseafter => console.log(responseafter))
-    // .catch(err => console.log(err));
+      console.log('successfully added');
+      console.log(res.id);
+      return res.id;
+    })
+    .then (response => {
+      return this.firebseService.addClubManagement(response);
+    })
+    .then(responseafter => console.log(responseafter))
+    .catch(err => console.log(err));
   }
 
 }

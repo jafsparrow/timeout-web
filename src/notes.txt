@@ -1,0 +1,3 @@
+git hub page deploy 
+
+ng build --prod --output-path docs --base-href timeout-web

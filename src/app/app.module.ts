@@ -19,6 +19,8 @@ import { FirebaseService } from './shared/service/firebase.service';
 import { AddclubComponent } from './addclub/addclub.component';
 import { ClubViewComponent } from './club-view/club-view.component';
 
+import { AppRoutingModule } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { ClubViewComponent } from './club-view/club-view.component';
     FormsModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    AppRoutingModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

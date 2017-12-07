@@ -13,3 +13,13 @@
     height: auto;
     border-radius: 50%;
 }
+
+.header-image {
+    background-size: cover;
+}
+
+.club-view-card {
+    max-width: 500px;
+    margin: 5px auto;
+
+}

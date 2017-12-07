@@ -1,26 +1,38 @@
-<form #clubAddForm ="ngForm" (ngSubmit)="addClub(clubAddForm)">
-  <mat-form-field class="example-full-width">
-      <input matInput placeholder="Club Name"
-      name="name"
-      required ngModel>
-  </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-      <input matInput placeholder="Address 1"
-      name="address1"
-      required ngModel>
-  </mat-form-field>
+<mat-card class="club-add-form-container"  style="max-width: 500px;margin: 5px auto;">
 
-  <div>
-    <mat-form-field style="width: 100%;">
-      <textarea matInput name="description" 
-        placeholder="Add some notes here"ngModel></textarea>
+  <mat-card-title>Please fill up the following details</mat-card-title>
+  
+  <form #clubAddForm ="ngForm" (ngSubmit)="addClub(clubAddForm)">
+    <mat-form-field class="input-full-width">
+        <input matInput placeholder="Club Name"
+        name="name"
+        required ngModel>
     </mat-form-field>
-  </div>
-
-
-  <!-- <input type="file" name="image" ngModel> -->
-  <button type="submit" mat-raised-button
-    color="primary" [disabled]="!clubAddForm.valid">Submit</button>
-
-</form>
+  
+    <mat-form-field class="input-full-width">
+        <input matInput placeholder="Address 1"
+        name="address1"
+        required ngModel>
+    </mat-form-field>
+<!-- 
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+  
+    <div>
+      <mat-form-field style="width: 100%;">
+        <textarea matInput name="description" 
+          placeholder="Add some notes here"ngModel></textarea>
+      </mat-form-field>
+    </div>
+  
+  
+    <!-- <input type="file" name="image" ngModel> -->
+    <button type="submit" mat-raised-button
+      color="primary" [disabled]="!clubAddForm.valid">Submit</button>
+  
+  </form>
+</mat-card>
